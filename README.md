@@ -5,3 +5,7 @@
 ## A választott Chefer téma kapcsolva
 
 ## Az alap pizza adatbázis txt-ék bemásolva a seeder könyvtárba
+
+## Felkerültek az alap view-ok
+
+## Adatbázis felépítés migrációra seederekkel, modellekkel alap felhasználók feltöltése MySQL-be
