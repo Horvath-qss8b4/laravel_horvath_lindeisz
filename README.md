@@ -9,3 +9,12 @@
 ## Felkerültek az alap view-ok
 
 ## Adatbázis felépítés migrációra seederekkel, modellekkel alap felhasználók feltöltése MySQL-be
+## Elkészült az összes állomány a migrációhoz 
+- migrációs állományok 
+- seederek 
+- piza
+- kategória
+- rendelések
+
+AuthController a bejelnetkezéshez, web.php-ben deklarálva
+
