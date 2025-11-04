@@ -24,3 +24,12 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+use App\Http\Controllers\MessageController;
+Route::middleware('auth')->group(function () {
+    Route::get('/kapcsolat', [MessageController::class, 'showForm'])->name('kapcsolat.form');
+    Route::post('/kapcsolat', [MessageController::class, 'store'])->name('kapcsolat.store');
+});
+Route::middleware('auth')->group(function () {
+    Route::get('/uzenetek', [MessageController::class, 'index'])->name('uzenetek.index');
+});
