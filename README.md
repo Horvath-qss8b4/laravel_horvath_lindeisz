@@ -17,4 +17,5 @@
 - rendelések
 
 AuthController a bejelnetkezéshez, web.php-ben deklarálva
-
+## Elkészült a login. Az üzenet megjelenítése menüben. A modellek elkészültek
+## Elkészült a diagram és az adatbázis megjelenítése menüben

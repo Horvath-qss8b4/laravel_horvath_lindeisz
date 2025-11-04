@@ -33,3 +33,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/uzenetek', [MessageController::class, 'index'])->name('uzenetek.index');
 });
+
+use App\Http\Controllers\DiagramController;
+Route::get('/diagram', [DiagramController::class, 'index'])->name('diagram');
+
+use App\Http\Controllers\AdatbazisController;
+Route::get('/adatbazis', [AdatbazisController::class, 'index'])->name('adatbazis');
