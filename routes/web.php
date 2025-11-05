@@ -43,3 +43,9 @@ Route::get('/adatbazis', [AdatbazisController::class, 'index'])->name('adatbazis
 use App\Http\Controllers\PizzaController;
 Route::resource('pizzak', PizzaController::class)->middleware('auth');
 use App\Http\Controllers\AdminController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])
+        ->middleware('admin')
+        ->name('admin.index');
+});

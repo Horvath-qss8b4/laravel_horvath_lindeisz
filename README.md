@@ -25,3 +25,5 @@ AuthController a bejelnetkezéshez, web.php-ben deklarálva
 ## Elkészült a diagram és az adatbázis megjelenítése menüben
 
 ## Elkészült a pizzák CRUD
+
+## Admin autentikáció és az admin menu + admin funkció, registrált userek lekérdezése
