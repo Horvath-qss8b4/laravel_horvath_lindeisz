@@ -39,3 +39,7 @@ Route::get('/diagram', [DiagramController::class, 'index'])->name('diagram');
 
 use App\Http\Controllers\AdatbazisController;
 Route::get('/adatbazis', [AdatbazisController::class, 'index'])->name('adatbazis');
+
+use App\Http\Controllers\PizzaController;
+Route::resource('pizzak', PizzaController::class)->middleware('auth');
+use App\Http\Controllers\AdminController;
