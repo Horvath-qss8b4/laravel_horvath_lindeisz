@@ -2,7 +2,8 @@
 
 
 <!-- Spinner Start -->
-<div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div id="spinner"
+  class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
   <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
 </div>
 <!-- Spinner End -->
@@ -11,7 +12,8 @@
 <div class="container-fluid bg-dark px-0">
   <div class="row gx-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="col-lg-3 bg-primary d-none d-lg-block">
-      <a href="{{ url('/') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+      <a href="{{ url('/') }}"
+        class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
         <h1 class="m-0 display-4 text-white text-uppercase">Chefer</h1>
       </a>
     </div>
@@ -19,12 +21,13 @@
 
       {{-- ⚡ Ezt az egész blokkot csak ADMIN láthatja --}}
       @auth
-        @if(Auth::user()->role_id === 3)
+        @if(optional(Auth::user())->role_id === 3)
           <div class="row gx-0 d-none d-lg-flex bg-dark">
             <div class="col-6 px-5 text-start">
               <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                 <i class="fa fa-envelope text-primary me-2"></i>
-                <p class="mb-0">Ez az admin menü, mivel a feladat nem kérte nincs funkció hozzákapcsolva csak a <b style="color: orange;">User lista</b> működik</p>
+                <p class="mb-0">Ez az admin menü, mivel a feladat nem kérte nincs funkció hozzákapcsolva csak a <b
+                    style="color: orange;">User lista</b> működik</p>
               </div>
             </div>
             <div class="col-6 px-5 text-end">
@@ -80,7 +83,7 @@
   </div>
 </div>
 <!-- Hero End -->
- 
+
 <!-- Company Intro Start -->
 <div class="container my-5">
   <div class="card bg-dark border-primary shadow-lg">
@@ -91,14 +94,16 @@
       <p class="mb-4">
         A Chefer Laravel egy fiatal, lendületes csapat, amely hisz abban, hogy a pizza nemcsak étel, hanem élmény.
         Célunk, hogy minden szeletben érezd a minőséget, a friss alapanyagokat és a szenvedélyt, amivel készítjük.
-        Kínálatunkban klasszikus olasz ízek és különleges, egyedi kombinációk is megtalálhatók – mindezt gyors kiszolgálással és szeretettel tálalva.
+        Kínálatunkban klasszikus olasz ízek és különleges, egyedi kombinációk is megtalálhatók – mindezt gyors
+        kiszolgálással és szeretettel tálalva.
         Mert számunkra a pizza nem munka, hanem hivatás.
       </p>
 
       <h4 class="text-success mb-3">Kézműves pizzák, friss alapanyagokkal</h4>
       <p>
         Minden pizzánkat kézzel készítjük, válogatott alapanyagokból és eredeti olasz recept alapján.
-        A tésztát naponta frissen gyúrjuk, a szósz házilag készül, a feltéteket pedig gondosan válogatjuk, hogy minden falatban érezd a különbséget.
+        A tésztát naponta frissen gyúrjuk, a szósz házilag készül, a feltéteket pedig gondosan válogatjuk, hogy minden
+        falatban érezd a különbséget.
       </p>
     </div>
   </div>
@@ -110,7 +115,8 @@
   <div class="row g-5 gb-5">
     <div class="col-lg-4 col-md-6">
       <div class="feature-item rounded text-center p-5">
-        <img class="img-fluid bg-white rounded-circle" src="{{ asset('chefer/img/feature-1.png') }}" style="width: 150px; height: 150px;">
+        <img class="img-fluid bg-white rounded-circle" src="{{ asset('chefer/img/feature-1.png') }}"
+          style="width: 150px; height: 150px;">
         <h3 class="my-4">Best Chef</h3>
         <p class="text-light">Laravel + Bootstrap 5 integrált sablon</p>
         <p class="text-light">Reszponzív és teljesen működő elrendezés</p>
@@ -118,7 +124,8 @@
     </div>
     <div class="col-lg-4 col-md-6">
       <div class="feature-item rounded text-center p-5">
-        <img class="img-fluid bg-white rounded-circle" src="{{ asset('chefer/img/feature-2.png') }}" style="width: 150px; height: 150px;">
+        <img class="img-fluid bg-white rounded-circle" src="{{ asset('chefer/img/feature-2.png') }}"
+          style="width: 150px; height: 150px;">
         <h3 class="my-4">Modern Design</h3>
         <p class="text-light">Kapcsolat üzenet, bejelentkezve listázható</p>
         <p class="text-light">Adatbázis lekérdezések, diagram</p>
@@ -126,7 +133,8 @@
     </div>
     <div class="col-lg-4 col-md-6">
       <div class="feature-item rounded text-center p-5">
-        <img class="img-fluid bg-white rounded-circle" src="{{ asset('chefer/img/feature-3.png') }}" style="width: 150px; height: 150px;">
+        <img class="img-fluid bg-white rounded-circle" src="{{ asset('chefer/img/feature-3.png') }}"
+          style="width: 150px; height: 150px;">
         <h3 class="my-4">Pizzás CRUD</h3>
         <p class="text-light">Adatbázis, pizza tábla CRUD szerkeszthetősége</p>
         <p class="text-light">Autentikáció, admin menü</p>

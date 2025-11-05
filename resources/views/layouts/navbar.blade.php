@@ -1,9 +1,9 @@
 @auth
-    @if(Auth::user()->role_id === 3)
+    @if(optional(Auth::user())->role_id >= 3)
         <li><a href="#">Admin</a></li>
     @endif
 
-    @if(Auth::user()->role_id >= 2)
+    @if(optional(Auth::user())->role_id >= 2)
         <li><a href="#">Üzenetek</a></li>
     @endif
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
   <meta charset="UTF-8">
   <title>Pizza Beadandó</title>
@@ -8,7 +9,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
 
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
@@ -22,6 +24,7 @@
   <link href="{{ asset('chefer/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('chefer/css/style.css') }}" rel="stylesheet">
 </head>
+
 <body class="bg-dark text-secondary">
 
   {{-- Felső navigáció --}}
@@ -44,19 +47,21 @@
           <li class="nav-item"><a class="nav-link" href="{{ route('pizzak.index') }}">CRUD</a></li>
 
           @auth
+
             {{-- Bejelentkezett felhasználó neve --}}
             <li class="nav-item">
               <span class="nav-link text-info">
-                <i class="fa fa-user"></i> {{ Auth::user()->name }}
+                <i class="fa fa-user"></i> {{ optional(Auth::user())->name }}
+
               </span>
             </li>
 
             {{-- Jogosultság szerinti menük --}}
-            @if(Auth::user()->role_id >= 2)
+            @if(optional(Auth::user())->role_id >= 2)
               <li class="nav-item"><a class="nav-link" href="{{ url('/uzenetek') }}">Üzenetek</a></li>
             @endif
 
-            @if(Auth::user()->role_id === 3)
+            @if(optional(Auth::user())->role_id === 3)
               <li class="nav-item">
                 <a class="nav-link text-warning" href="{{ url('/admin') }}">
                   <i class="fa fa-crown"></i> Admin
@@ -90,7 +95,7 @@
   {{-- Lábléc --}}
   <div class="container-fluid bg-dark text-secondary px-5 mt-5">
     <div class="text-center mt-4 py-4">
-      &copy; {{ date('Y') }} Pizza Beadandó – Laravel + Chefer  Horváth László  Lindeisz Henrik
+      &copy; {{ date('Y') }} Pizza Beadandó – Laravel + Chefer Horváth László Lindeisz Henrik
     </div>
   </div>
 
@@ -106,4 +111,5 @@
   <!-- Chefer main -->
   <script src="{{ asset('chefer/js/main.js') }}"></script>
 </body>
+
 </html>

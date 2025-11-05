@@ -27,3 +27,7 @@ AuthController a bejelnetkezéshez, web.php-ben deklarálva
 ## Elkészült a pizzák CRUD
 
 ## Admin autentikáció és az admin menu + admin funkció, registrált userek lekérdezése
+
+## Tesztelés -> Hiba javítás -> regressziós teszt
+
+## A feladat elkészült
